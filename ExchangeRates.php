@@ -174,7 +174,7 @@ class ExchangeRates
 	    $xmlStructure = new SimpleXMLElement($root ? '<' . $root . '/>' : '<root/>');
 		foreach($data as $value) {
 		
-			$xmlData = $xml->to_xml($xmlStructure, $value);
+			$xmlData = $xml->toXML($xmlStructure, $value);
 		}
 		
 		if($xml->isValidXml($xmlData) === false) {

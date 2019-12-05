@@ -1,9 +1,5 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 class XmlSort 
 {
 	/**
@@ -26,7 +22,12 @@ class XmlSort
 		}
 	}
 
-	public function to_xml($xml, array $order)
+	/**
+     * Using array data it converts it into Xml
+     *  
+     * @return xml
+    */
+	public function toXML($xml, array $order)
 	{	
 		foreach($order as $key => $value) {
 	        if (is_array($value)) { 
@@ -63,6 +64,12 @@ class XmlSort
 	    return $xml->asXML();
 	}
 
+	/**
+     * using simplexml_load_string which checks 
+     * if xml string is valid 
+     *  
+     * @return bool
+    */
 	public function isValidXml(string $data) : bool
 	{	
 		$unsureXml = simplexml_load_string($data);
@@ -72,6 +79,11 @@ class XmlSort
 		return true;
 	}
 
+	/**
+     * generates creates and writes onto file and outputs
+     *  
+     * @return void
+    */	
 	public function outputFile($file):void 
 	{	
 		$filename = 'xmlfile.xml';
