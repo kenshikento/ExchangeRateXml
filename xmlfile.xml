@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<orders><order><id>1</id><date>01/01/2016</date><products><product title="Rimmel Lasting Finish Lipstick 4g" price="4.4"/><product title="Sebamed Shampoo 200ml" price="4.4"/></products><total>10.978</total></order><order><id>2</id><date>02/01/2016</date><products><product title="GHD Hair Straighteners" price="88.11"/><product title="Redken Shampure Shampoo" price="16.91"/></products><total>106.7822</total></order></orders>

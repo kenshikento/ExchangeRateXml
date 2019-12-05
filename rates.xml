@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<currencies>
+   <currency>
+      <name>Pound</name>
+      <code>GBP</code>
+      <rateHistory>
+         <rates date="01/01/2016">
+            <rate code="GBP" value="1" />
+            <rate code="EUR" value="1.10" />
+         </rates>
+         <rates date="02/01/2016">
+            <rate code="GBP" value="1" />
+            <rate code="EUR" value="1.09" />
+         </rates>
+      </rateHistory>
+   </currency>
+   <currency>
+      <name>Euro</name>
+      <code>EUR</code>
+      <rateHistory>
+         <rates date="01/01/2016">
+            <rate code="GBP" value="0.89" />
+            <rate code="EUR" value="1" />
+         </rates>
+         <rates date="02/01/2016">
+            <rate code="GBP" value="0.8" />
+            <rate code="EUR" value="1" />
+         </rates>
+      </rateHistory>
+   </currency>
+</currencies>
