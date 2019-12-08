@@ -19,7 +19,7 @@ class ExchangeRates
      *
      * @return object
      */
-	public function getPrice(string $date, ?string $currencyType, $test=null) :object
+	public function getPrice(string $date, ?string $currencyType) :object
 	{
 		$data = new XmlSort(); 
 		$contents = $data->getContents('rates.xml');
@@ -46,14 +46,12 @@ class ExchangeRates
      *
      * @return array
      */
-	public function xmlDateGrabber(object $data, string $currencyType, ?string $test=null) : array  
+	public function xmlDateGrabber(object $data, string $currencyType) : array  
 	{
 		$date = [];
 		$values = [];
 		$max = count($data->rate);
-		if($test==='test') {
-			//dd(date("m/d/Y h:i:s A T",$date));
-		}
+
 		for ($x = 0; $x < $max; $x++) {
 			$values = $data->rate[$x]->attributes();
 
@@ -108,7 +106,7 @@ class ExchangeRates
 			$date = strtotime((String) $order->date[0]);
 			$price = $this->getPrice($date, (string)$order->currency);
 
-			$xmlCurrency = $this->xmlDateGrabber($price, $currency,'test');
+			$xmlCurrency = $this->xmlDateGrabber($price, $currency);
 			$targetCurrency = $xmlCurrency[$currency];
 			$currentCurrency = $xmlCurrency[0];
 
